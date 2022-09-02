@@ -1,0 +1,824 @@
+{
+  "address": "0xC304582cFeBB9e38B56E8629DBD6c9D89712d843",
+  "abi": [
+    {
+      "inputs": [],
+      "stateMutability": "nonpayable",
+      "type": "constructor"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_approved",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Approval",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "indexed": false,
+          "internalType": "bool",
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "ApprovalForAll",
+      "type": "event"
+    },
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "indexed": true,
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "Transfer",
+      "type": "event"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_approved",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "approve",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "name": "balanceOf",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "getApproved",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_operator",
+          "type": "address"
+        }
+      ],
+      "name": "isApprovedForAll",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "string",
+          "name": "_uri",
+          "type": "string"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "name",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_name",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "ownerOf",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "safeTransferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_operator",
+          "type": "address"
+        },
+        {
+          "internalType": "bool",
+          "name": "_approved",
+          "type": "bool"
+        }
+      ],
+      "name": "setApprovalForAll",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_interfaceID",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "symbol",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_symbol",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_owner",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_index",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenOfOwnerByIndex",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "tokenURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "totalSupply",
+      "outputs": [
+        {
+          "internalType": "uint256",
+          "name": "",
+          "type": "uint256"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_from",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_tokenId",
+          "type": "uint256"
+        }
+      ],
+      "name": "transferFrom",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "transactionHash": "0x5798349e3939c6826907a675bcdfcfa7d3371fb22aa379cb7a3c8f8994235173",
+  "receipt": {
+    "to": null,
+    "from": "0x9117f5EF4156709092f79740a97b1638cA399A00",
+    "contractAddress": "0xC304582cFeBB9e38B56E8629DBD6c9D89712d843",
+    "transactionIndex": 13,
+    "gasUsed": "1493530",
+    "logsBloom": "0x00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000",
+    "blockHash": "0x2e77452e4bb88c403d3459727a1a99d4e168e309f93a18a63ff82d4b640e7f9d",
+    "transactionHash": "0x5798349e3939c6826907a675bcdfcfa7d3371fb22aa379cb7a3c8f8994235173",
+    "logs": [],
+    "blockNumber": 11309388,
+    "cumulativeGasUsed": "7998874",
+    "status": 1,
+    "byzantium": true
+  },
+  "args": [],
+  "numDeployments": 2,
+  "solcInputHash": "05db9b8e1ed56349bf493ee0c3cb18a2",
+  "metadata": "{\"compiler\":{\"version\":\"0.8.7+commit.e28d00a7\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"constructor\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_approved\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"Approval\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"},{\"indexed\":false,\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"ApprovalForAll\",\"type\":\"event\"},{\"anonymous\":false,\"inputs\":[{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"indexed\":true,\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"Transfer\",\"type\":\"event\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_approved\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"approve\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"name\":\"balanceOf\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"getApproved\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"}],\"name\":\"isApprovedForAll\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"string\",\"name\":\"_uri\",\"type\":\"string\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"name\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"_name\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"ownerOf\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"safeTransferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_operator\",\"type\":\"address\"},{\"internalType\":\"bool\",\"name\":\"_approved\",\"type\":\"bool\"}],\"name\":\"setApprovalForAll\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_interfaceID\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"symbol\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"_symbol\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"tokenByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_owner\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_index\",\"type\":\"uint256\"}],\"name\":\"tokenOfOwnerByIndex\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"tokenURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"totalSupply\",\"outputs\":[{\"internalType\":\"uint256\",\"name\":\"\",\"type\":\"uint256\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_from\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_tokenId\",\"type\":\"uint256\"}],\"name\":\"transferFrom\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"details\":\"Optional enumeration implementation for ERC-721 non-fungible token standard.\",\"kind\":\"dev\",\"methods\":{\"approve(address,uint256)\":{\"details\":\"Set or reaffirm the approved address for an NFT. This function can be changed to payable.\",\"params\":{\"_approved\":\"Address to be approved for the given NFT ID.\",\"_tokenId\":\"ID of the token to be approved.\"}},\"balanceOf(address)\":{\"details\":\"Returns the number of NFTs owned by `_owner`. NFTs assigned to the zero address are considered invalid, and this function throws for queries about the zero address.\",\"params\":{\"_owner\":\"Address for whom to query the balance.\"},\"returns\":{\"_0\":\"Balance of _owner.\"}},\"constructor\":{\"details\":\"Contract constructor.\"},\"getApproved(uint256)\":{\"details\":\"Get the approved address for a single NFT.\",\"params\":{\"_tokenId\":\"ID of the NFT to query the approval of.\"},\"returns\":{\"_0\":\"Address that _tokenId is approved for.\"}},\"isApprovedForAll(address,address)\":{\"details\":\"Checks if `_operator` is an approved operator for `_owner`.\",\"params\":{\"_operator\":\"The address that acts on behalf of the owner.\",\"_owner\":\"The address that owns the NFTs.\"},\"returns\":{\"_0\":\"True if approved for all, false otherwise.\"}},\"name()\":{\"details\":\"Returns a descriptive name for a collection of NFTokens.\",\"returns\":{\"_name\":\"Representing name.\"}},\"ownerOf(uint256)\":{\"details\":\"Returns the address of the owner of the NFT. NFTs assigned to the zero address are considered invalid, and queries about them do throw.\",\"params\":{\"_tokenId\":\"The identifier for an NFT.\"},\"returns\":{\"_owner\":\"Address of _tokenId owner.\"}},\"safeTransferFrom(address,address,uint256)\":{\"details\":\"Transfers the ownership of an NFT from one address to another address. This function can be changed to payable.\",\"params\":{\"_from\":\"The current owner of the NFT.\",\"_to\":\"The new owner.\",\"_tokenId\":\"The NFT to transfer.\"}},\"safeTransferFrom(address,address,uint256,bytes)\":{\"details\":\"Transfers the ownership of an NFT from one address to another address. This function can be changed to payable.\",\"params\":{\"_data\":\"Additional data with no specified format, sent in call to `_to`.\",\"_from\":\"The current owner of the NFT.\",\"_to\":\"The new owner.\",\"_tokenId\":\"The NFT to transfer.\"}},\"setApprovalForAll(address,bool)\":{\"details\":\"Enables or disables approval for a third party (\\\"operator\\\") to manage all of `msg.sender`'s assets. It also emits the ApprovalForAll event.\",\"params\":{\"_approved\":\"True if the operators is approved, false to revoke approval.\",\"_operator\":\"Address to add to the set of authorized operators.\"}},\"supportsInterface(bytes4)\":{\"details\":\"Function to check which interfaces are suported by this contract.\",\"params\":{\"_interfaceID\":\"Id of the interface.\"},\"returns\":{\"_0\":\"True if _interfaceID is supported, false otherwise.\"}},\"symbol()\":{\"details\":\"Returns an abbreviated name for NFTokens.\",\"returns\":{\"_symbol\":\"Representing symbol.\"}},\"tokenByIndex(uint256)\":{\"details\":\"Returns NFT ID by its index.\",\"params\":{\"_index\":\"A counter less than `totalSupply()`.\"},\"returns\":{\"_0\":\"Token id.\"}},\"tokenOfOwnerByIndex(address,uint256)\":{\"details\":\"returns the n-th NFT ID from a list of owner's tokens.\",\"params\":{\"_index\":\"Index number representing n-th token in owner's list of tokens.\",\"_owner\":\"Token owner's address.\"},\"returns\":{\"_0\":\"Token id.\"}},\"tokenURI(uint256)\":{\"details\":\"A distinct URI (RFC 3986) for a given NFT.\",\"params\":{\"_tokenId\":\"Id for which we want uri.\"},\"returns\":{\"_0\":\"URI of _tokenId.\"}},\"totalSupply()\":{\"details\":\"Returns the count of all existing NFTokens.\",\"returns\":{\"_0\":\"Total supply of NFTs.\"}},\"transferFrom(address,address,uint256)\":{\"details\":\"Throws unless `msg.sender` is the current owner, an authorized operator, or the approved address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is the zero address. Throws if `_tokenId` is not a valid NFT. This function can be changed to payable.\",\"params\":{\"_from\":\"The current owner of the NFT.\",\"_to\":\"The new owner.\",\"_tokenId\":\"The NFT to transfer.\"}}},\"stateVariables\":{\"INVALID_INDEX\":{\"details\":\"List of revert message codes. Implementing dApp should handle showing the correct message. Based on 0xcert framework error codes.\"},\"idToIndex\":{\"details\":\"Mapping from token ID to its index in global tokens array.\"},\"idToOwnerIndex\":{\"details\":\"Mapping from NFT ID to its index in the owner tokens list.\"},\"idToUri\":{\"details\":\"Mapping from NFT ID to metadata uri.\"},\"nftName\":{\"details\":\"A descriptive name for a collection of NFTs.\"},\"nftSymbol\":{\"details\":\"An abbreviated name for NFTokens.\"},\"ownerToIds\":{\"details\":\"Mapping from owner to list of owned NFT IDs.\"},\"tokens\":{\"details\":\"Array of all NFT IDs.\"}},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"approve(address,uint256)\":{\"notice\":\"The zero address indicates there is no approved address. Throws unless `msg.sender` is the current NFT owner, or an authorized operator of the current owner.\"},\"getApproved(uint256)\":{\"notice\":\"Throws if `_tokenId` is not a valid NFT.\"},\"safeTransferFrom(address,address,uint256)\":{\"notice\":\"This works identically to the other function with an extra data parameter, except this function just sets data to \\\"\\\".\"},\"safeTransferFrom(address,address,uint256,bytes)\":{\"notice\":\"Throws unless `msg.sender` is the current owner, an authorized operator, or the approved address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is the zero address. Throws if `_tokenId` is not a valid NFT. When transfer is complete, this function checks if `_to` is a smart contract (code size > 0). If so, it calls `onERC721Received` on `_to` and throws if the return value is not `bytes4(keccak256(\\\"onERC721Received(address,uint256,bytes)\\\"))`.\"},\"setApprovalForAll(address,bool)\":{\"notice\":\"This works even if sender doesn't own any tokens at the time.\"},\"transferFrom(address,address,uint256)\":{\"notice\":\"The caller is responsible to confirm that `_to` is capable of receiving NFTs or else they may be permanently lost.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"contracts/tokens/nf-token-emumMetadata.sol\":\"NFTokenMetaEnumerable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"none\",\"useLiteralContent\":true},\"optimizer\":{\"enabled\":true,\"runs\":800},\"remappings\":[]},\"sources\":{\"contracts/tokens/erc721-enumerable.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\n/**\\r\\n * @dev Optional enumeration extension for ERC-721 non-fungible token standard.\\r\\n * See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md.\\r\\n */\\r\\ninterface ERC721Enumerable\\r\\n{\\r\\n\\r\\n  /**\\r\\n   * @dev Returns a count of valid NFTs tracked by this contract, where each one of them has an\\r\\n   * assigned and queryable owner not equal to the zero address.\\r\\n   * @return Total supply of NFTs.\\r\\n   */\\r\\n  function totalSupply()\\r\\n    external\\r\\n    view\\r\\n    returns (uint256);\\r\\n\\r\\n  /**\\r\\n   * @dev Returns the token identifier for the `_index`th NFT. Sort order is not specified.\\r\\n   * @param _index A counter less than `totalSupply()`.\\r\\n   * @return Token id.\\r\\n   */\\r\\n  function tokenByIndex(\\r\\n    uint256 _index\\r\\n  )\\r\\n    external\\r\\n    view\\r\\n    returns (uint256);\\r\\n\\r\\n  /**\\r\\n   * @dev Returns the token identifier for the `_index`th NFT assigned to `_owner`. Sort order is\\r\\n   * not specified. It throws if `_index` >= `balanceOf(_owner)` or if `_owner` is the zero address,\\r\\n   * representing invalid NFTs.\\r\\n   * @param _owner An address where we are interested in NFTs owned by them.\\r\\n   * @param _index A counter less than `balanceOf(_owner)`.\\r\\n   * @return Token id.\\r\\n   */\\r\\n  function tokenOfOwnerByIndex(\\r\\n    address _owner,\\r\\n    uint256 _index\\r\\n  )\\r\\n    external\\r\\n    view\\r\\n    returns (uint256);\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x05ce6fd319730e86762a917b0f2756920400299a11bd0573e6e4ce0c7326719d\",\"license\":\"MIT\"},\"contracts/tokens/erc721-metadata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\n/**\\r\\n * @dev Optional metadata extension for ERC-721 non-fungible token standard.\\r\\n * See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md.\\r\\n */\\r\\ninterface ERC721Metadata\\r\\n{\\r\\n\\r\\n  /**\\r\\n   * @dev Returns a descriptive name for a collection of NFTs in this contract.\\r\\n   * @return _name Representing name.\\r\\n   */\\r\\n  function name()\\r\\n    external\\r\\n    view\\r\\n    returns (string memory _name);\\r\\n\\r\\n  /**\\r\\n   * @dev Returns a abbreviated name for a collection of NFTs in this contract.\\r\\n   * @return _symbol Representing symbol.\\r\\n   */\\r\\n  function symbol()\\r\\n    external\\r\\n    view\\r\\n    returns (string memory _symbol);\\r\\n\\r\\n  /**\\r\\n   * @dev Returns a distinct Uniform Resource Identifier (URI) for a given asset. It Throws if\\r\\n   * `_tokenId` is not a valid NFT. URIs are defined in RFC3986. The URI may point to a JSON file\\r\\n   * that conforms to the \\\"ERC721 Metadata JSON Schema\\\".\\r\\n   * @return URI of _tokenId.\\r\\n   */\\r\\n  function tokenURI(uint256 _tokenId)\\r\\n    external\\r\\n    view\\r\\n    returns (string memory);\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x42f83c7b536d7356e6c0ad76906aec2d4788174c3bc2ff6932689d79f84593e3\",\"license\":\"MIT\"},\"contracts/tokens/erc721-token-receiver.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\n/**\\r\\n * @dev ERC-721 interface for accepting safe transfers.\\r\\n * See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md.\\r\\n */\\r\\ninterface ERC721TokenReceiver\\r\\n{\\r\\n\\r\\n  /**\\r\\n   * @notice The contract address is always the message sender. A wallet/broker/auction application\\r\\n   * MUST implement the wallet interface if it will accept safe transfers.\\r\\n   * @dev Handle the receipt of a NFT. The ERC721 smart contract calls this function on the\\r\\n   * recipient after a `transfer`. This function MAY throw to revert and reject the transfer. Return\\r\\n   * of other than the magic value MUST result in the transaction being reverted.\\r\\n   * Returns `bytes4(keccak256(\\\"onERC721Received(address,address,uint256,bytes)\\\"))` unless throwing.\\r\\n   * @param _operator The address which called `safeTransferFrom` function.\\r\\n   * @param _from The address which previously owned the token.\\r\\n   * @param _tokenId The NFT identifier which is being transferred.\\r\\n   * @param _data Additional data with no specified format.\\r\\n   * @return Returns `bytes4(keccak256(\\\"onERC721Received(address,address,uint256,bytes)\\\"))`.\\r\\n   */\\r\\n  function onERC721Received(\\r\\n    address _operator,\\r\\n    address _from,\\r\\n    uint256 _tokenId,\\r\\n    bytes calldata _data\\r\\n  )\\r\\n    external\\r\\n    returns(bytes4);\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x841d6c556e9813b2276ed73c295f984ef9229b2f082ad458de196aa5aeebd483\",\"license\":\"MIT\"},\"contracts/tokens/erc721.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\n/**\\r\\n * @dev ERC-721 non-fungible token standard.\\r\\n * See https://github.com/ethereum/EIPs/blob/master/EIPS/eip-721.md.\\r\\n */\\r\\ninterface ERC721\\r\\n{\\r\\n\\r\\n  /**\\r\\n   * @dev Emits when ownership of any NFT changes by any mechanism. This event emits when NFTs are\\r\\n   * created (`from` == 0) and destroyed (`to` == 0). Exception: during contract creation, any\\r\\n   * number of NFTs may be created and assigned without emitting Transfer. At the time of any\\r\\n   * transfer, the approved address for that NFT (if any) is reset to none.\\r\\n   */\\r\\n  event Transfer(\\r\\n    address indexed _from,\\r\\n    address indexed _to,\\r\\n    uint256 indexed _tokenId\\r\\n  );\\r\\n\\r\\n  /**\\r\\n   * @dev This emits when the approved address for an NFT is changed or reaffirmed. The zero\\r\\n   * address indicates there is no approved address. When a Transfer event emits, this also\\r\\n   * indicates that the approved address for that NFT (if any) is reset to none.\\r\\n   */\\r\\n  event Approval(\\r\\n    address indexed _owner,\\r\\n    address indexed _approved,\\r\\n    uint256 indexed _tokenId\\r\\n  );\\r\\n\\r\\n  /**\\r\\n   * @dev This emits when an operator is enabled or disabled for an owner. The operator can manage\\r\\n   * all NFTs of the owner.\\r\\n   */\\r\\n  event ApprovalForAll(\\r\\n    address indexed _owner,\\r\\n    address indexed _operator,\\r\\n    bool _approved\\r\\n  );\\r\\n\\r\\n  /**\\r\\n   * @notice Throws unless `msg.sender` is the current owner, an authorized operator, or the\\r\\n   * approved address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is\\r\\n   * the zero address. Throws if `_tokenId` is not a valid NFT. When transfer is complete, this\\r\\n   * function checks if `_to` is a smart contract (code size > 0). If so, it calls\\r\\n   * `onERC721Received` on `_to` and throws if the return value is not\\r\\n   * `bytes4(keccak256(\\\"onERC721Received(address,uint256,bytes)\\\"))`.\\r\\n   * @dev Transfers the ownership of an NFT from one address to another address. This function can\\r\\n   * be changed to payable.\\r\\n   * @param _from The current owner of the NFT.\\r\\n   * @param _to The new owner.\\r\\n   * @param _tokenId The NFT to transfer.\\r\\n   * @param _data Additional data with no specified format, sent in call to `_to`.\\r\\n   */\\r\\n  function safeTransferFrom(\\r\\n    address _from,\\r\\n    address _to,\\r\\n    uint256 _tokenId,\\r\\n    bytes calldata _data\\r\\n  )\\r\\n    external;\\r\\n\\r\\n  /**\\r\\n   * @notice This works identically to the other function with an extra data parameter, except this\\r\\n   * function just sets data to \\\"\\\"\\r\\n   * @dev Transfers the ownership of an NFT from one address to another address. This function can\\r\\n   * be changed to payable.\\r\\n   * @param _from The current owner of the NFT.\\r\\n   * @param _to The new owner.\\r\\n   * @param _tokenId The NFT to transfer.\\r\\n   */\\r\\n  function safeTransferFrom(\\r\\n    address _from,\\r\\n    address _to,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external;\\r\\n\\r\\n  /**\\r\\n   * @notice The caller is responsible to confirm that `_to` is capable of receiving NFTs or else\\r\\n   * they may be permanently lost.\\r\\n   * @dev Throws unless `msg.sender` is the current owner, an authorized operator, or the approved\\r\\n   * address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is the zero\\r\\n   * address. Throws if `_tokenId` is not a valid NFT.  This function can be changed to payable.\\r\\n   * @param _from The current owner of the NFT.\\r\\n   * @param _to The new owner.\\r\\n   * @param _tokenId The NFT to transfer.\\r\\n   */\\r\\n  function transferFrom(\\r\\n    address _from,\\r\\n    address _to,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external;\\r\\n\\r\\n  /**\\r\\n   * @notice The zero address indicates there is no approved address. Throws unless `msg.sender` is\\r\\n   * the current NFT owner, or an authorized operator of the current owner.\\r\\n   * @param _approved The new approved NFT controller.\\r\\n   * @dev Set or reaffirm the approved address for an NFT. This function can be changed to payable.\\r\\n   * @param _tokenId The NFT to approve.\\r\\n   */\\r\\n  function approve(\\r\\n    address _approved,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external;\\r\\n\\r\\n  /**\\r\\n   * @notice The contract MUST allow multiple operators per owner.\\r\\n   * @dev Enables or disables approval for a third party (\\\"operator\\\") to manage all of\\r\\n   * `msg.sender`'s assets. It also emits the ApprovalForAll event.\\r\\n   * @param _operator Address to add to the set of authorized operators.\\r\\n   * @param _approved True if the operators is approved, false to revoke approval.\\r\\n   */\\r\\n  function setApprovalForAll(\\r\\n    address _operator,\\r\\n    bool _approved\\r\\n  )\\r\\n    external;\\r\\n\\r\\n  /**\\r\\n   * @dev Returns the number of NFTs owned by `_owner`. NFTs assigned to the zero address are\\r\\n   * considered invalid, and this function throws for queries about the zero address.\\r\\n   * @notice Count all NFTs assigned to an owner.\\r\\n   * @param _owner Address for whom to query the balance.\\r\\n   * @return Balance of _owner.\\r\\n   */\\r\\n  function balanceOf(\\r\\n    address _owner\\r\\n  )\\r\\n    external\\r\\n    view\\r\\n    returns (uint256);\\r\\n\\r\\n  /**\\r\\n   * @notice Find the owner of an NFT.\\r\\n   * @dev Returns the address of the owner of the NFT. NFTs assigned to the zero address are\\r\\n   * considered invalid, and queries about them do throw.\\r\\n   * @param _tokenId The identifier for an NFT.\\r\\n   * @return Address of _tokenId owner.\\r\\n   */\\r\\n  function ownerOf(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external\\r\\n    view\\r\\n    returns (address);\\r\\n\\r\\n  /**\\r\\n   * @notice Throws if `_tokenId` is not a valid NFT.\\r\\n   * @dev Get the approved address for a single NFT.\\r\\n   * @param _tokenId The NFT to find the approved address for.\\r\\n   * @return Address that _tokenId is approved for.\\r\\n   */\\r\\n  function getApproved(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external\\r\\n    view\\r\\n    returns (address);\\r\\n\\r\\n  /**\\r\\n   * @notice Query if an address is an authorized operator for another address.\\r\\n   * @dev Returns true if `_operator` is an approved operator for `_owner`, false otherwise.\\r\\n   * @param _owner The address that owns the NFTs.\\r\\n   * @param _operator The address that acts on behalf of the owner.\\r\\n   * @return True if approved for all, false otherwise.\\r\\n   */\\r\\n  function isApprovedForAll(\\r\\n    address _owner,\\r\\n    address _operator\\r\\n  )\\r\\n    external\\r\\n    view\\r\\n    returns (bool);\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x96c3cef85c3ff14676494b4ee580330449a3f1dc625d63132da14825d64c9eff\",\"license\":\"MIT\"},\"contracts/tokens/nf-token-emumMetadata.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"./nf-token.sol\\\";\\r\\nimport \\\"./erc721-enumerable.sol\\\";\\r\\nimport \\\"./erc721-metadata.sol\\\";\\r\\n\\r\\n/**\\r\\n * @dev Optional enumeration implementation for ERC-721 non-fungible token standard.\\r\\n */\\r\\ncontract NFTokenMetaEnumerable is NFToken, ERC721Enumerable, ERC721Metadata {\\r\\n  /**\\r\\n   * @dev A descriptive name for a collection of NFTs.\\r\\n   */\\r\\n  string internal nftName;\\r\\n\\r\\n  /**\\r\\n   * @dev An abbreviated name for NFTokens.\\r\\n   */\\r\\n  string internal nftSymbol;\\r\\n\\r\\n  uint256 internal last_token_id;\\r\\n\\r\\n  /**\\r\\n   * @dev Mapping from NFT ID to metadata uri.\\r\\n   */\\r\\n  mapping(uint256 => string) internal idToUri;\\r\\n  /**\\r\\n   * @dev List of revert message codes. Implementing dApp should handle showing the correct message.\\r\\n   * Based on 0xcert framework error codes.\\r\\n   */\\r\\n  string constant INVALID_INDEX = \\\"005007\\\";\\r\\n\\r\\n  /**\\r\\n   * @dev Array of all NFT IDs.\\r\\n   */\\r\\n  uint256[] internal tokens;\\r\\n\\r\\n  /**\\r\\n   * @dev Mapping from token ID to its index in global tokens array.\\r\\n   */\\r\\n  mapping(uint256 => uint256) internal idToIndex;\\r\\n\\r\\n  /**\\r\\n   * @dev Mapping from owner to list of owned NFT IDs.\\r\\n   */\\r\\n  mapping(address => uint256[]) internal ownerToIds;\\r\\n\\r\\n  /**\\r\\n   * @dev Mapping from NFT ID to its index in the owner tokens list.\\r\\n   */\\r\\n  mapping(uint256 => uint256) internal idToOwnerIndex;\\r\\n\\r\\n  /**\\r\\n   * @dev Contract constructor.\\r\\n   */\\r\\n  constructor() {\\r\\n    supportedInterfaces[0x780e9d63] = true; // ERC721Enumerable\\r\\n    supportedInterfaces[0x5b5e139f] = true; // ERC721Metadata\\r\\n    nftName = \\\"SPOON NFT\\\";\\r\\n    nftSymbol = \\\"SPOON\\\";\\r\\n    last_token_id = 0;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Returns a descriptive name for a collection of NFTokens.\\r\\n   * @return _name Representing name.\\r\\n   */\\r\\n  function name() external view override returns (string memory _name) {\\r\\n    _name = nftName;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Returns an abbreviated name for NFTokens.\\r\\n   * @return _symbol Representing symbol.\\r\\n   */\\r\\n  function symbol() external view override returns (string memory _symbol) {\\r\\n    _symbol = nftSymbol;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev A distinct URI (RFC 3986) for a given NFT.\\r\\n   * @param _tokenId Id for which we want uri.\\r\\n   * @return URI of _tokenId.\\r\\n   */\\r\\n  function tokenURI(uint256 _tokenId)\\r\\n    external\\r\\n    view\\r\\n    override\\r\\n    validNFToken(_tokenId)\\r\\n    returns (string memory)\\r\\n  {\\r\\n    return _tokenURI(_tokenId);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This is an internal function that can be overriden if you want to implement a different\\r\\n   * way to generate token URI.\\r\\n   * @param _tokenId Id for which we want uri.\\r\\n   * @return URI of _tokenId.\\r\\n   */\\r\\n  function _tokenURI(uint256 _tokenId) internal view virtual returns (string memory) {\\r\\n    return idToUri[_tokenId];\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This is an internal function which should be called from user-implemented external\\r\\n   * function. Its purpose is to show and properly initialize data structures when using this\\r\\n   * implementation.\\r\\n   * @dev Set a distinct URI (RFC 3986) for a given NFT ID.\\r\\n   * @param _tokenId Id for which we want URI.\\r\\n   * @param _uri String representing RFC 3986 URI.\\r\\n   */\\r\\n  function _setTokenUri(uint256 _tokenId, string memory _uri) internal validNFToken(_tokenId) {\\r\\n    idToUri[_tokenId] = _uri;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Returns the count of all existing NFTokens.\\r\\n   * @return Total supply of NFTs.\\r\\n   */\\r\\n  function totalSupply() external view override returns (uint256) {\\r\\n    return tokens.length;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Returns NFT ID by its index.\\r\\n   * @param _index A counter less than `totalSupply()`.\\r\\n   * @return Token id.\\r\\n   */\\r\\n  function tokenByIndex(uint256 _index) external view override returns (uint256) {\\r\\n    require(_index < tokens.length, INVALID_INDEX);\\r\\n    return tokens[_index];\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev returns the n-th NFT ID from a list of owner's tokens.\\r\\n   * @param _owner Token owner's address.\\r\\n   * @param _index Index number representing n-th token in owner's list of tokens.\\r\\n   * @return Token id.\\r\\n   */\\r\\n  function tokenOfOwnerByIndex(address _owner, uint256 _index)\\r\\n    external\\r\\n    view\\r\\n    override\\r\\n    returns (uint256)\\r\\n  {\\r\\n    require(_index < ownerToIds[_owner].length, INVALID_INDEX);\\r\\n    return ownerToIds[_owner][_index];\\r\\n  }\\r\\n\\r\\n  function mint(\\r\\n    address _to,\\r\\n    // uint256 _tokenId,\\r\\n    string calldata _uri\\r\\n  ) public {\\r\\n    last_token_id++;\\r\\n    _mint(_to, last_token_id);\\r\\n    _setTokenUri(last_token_id, _uri);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This is an internal function which should be called from user-implemented external\\r\\n   * mint function. Its purpose is to show and properly initialize data structures when using this\\r\\n   * implementation.\\r\\n   * @dev Mints a new NFT.\\r\\n   * @param _to The address that will own the minted NFT.\\r\\n   * @param _tokenId of the NFT to be minted by the msg.sender.\\r\\n   */\\r\\n  function _mint(address _to, uint256 _tokenId) internal virtual override {\\r\\n    super._mint(_to, _tokenId);\\r\\n    tokens.push(_tokenId);\\r\\n    idToIndex[_tokenId] = tokens.length - 1;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This is an internal function which should be called from user-implemented external\\r\\n   * burn function. Its purpose is to show and properly initialize data structures when using this\\r\\n   * implementation. Also, note that this burn implementation allows the minter to re-mint a burned\\r\\n   * NFT.\\r\\n   * @dev Burns a NFT.\\r\\n   * @param _tokenId ID of the NFT to be burned.\\r\\n   */\\r\\n  function _burn(uint256 _tokenId) internal virtual override {\\r\\n    super._burn(_tokenId);\\r\\n    delete idToUri[_tokenId];\\r\\n\\r\\n    uint256 tokenIndex = idToIndex[_tokenId];\\r\\n    uint256 lastTokenIndex = tokens.length - 1;\\r\\n    uint256 lastToken = tokens[lastTokenIndex];\\r\\n\\r\\n    tokens[tokenIndex] = lastToken;\\r\\n\\r\\n    tokens.pop();\\r\\n    // This wastes gas if you are burning the last token but saves a little gas if you are not.\\r\\n    idToIndex[lastToken] = tokenIndex;\\r\\n    idToIndex[_tokenId] = 0;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice Use and override this function with caution. Wrong usage can have serious consequences.\\r\\n   * @dev Removes a NFT from an address.\\r\\n   * @param _from Address from wich we want to remove the NFT.\\r\\n   * @param _tokenId Which NFT we want to remove.\\r\\n   */\\r\\n  function _removeNFToken(address _from, uint256 _tokenId) internal virtual override {\\r\\n    require(idToOwner[_tokenId] == _from, NOT_OWNER);\\r\\n    delete idToOwner[_tokenId];\\r\\n\\r\\n    uint256 tokenToRemoveIndex = idToOwnerIndex[_tokenId];\\r\\n    uint256 lastTokenIndex = ownerToIds[_from].length - 1;\\r\\n\\r\\n    if (lastTokenIndex != tokenToRemoveIndex) {\\r\\n      uint256 lastToken = ownerToIds[_from][lastTokenIndex];\\r\\n      ownerToIds[_from][tokenToRemoveIndex] = lastToken;\\r\\n      idToOwnerIndex[lastToken] = tokenToRemoveIndex;\\r\\n    }\\r\\n\\r\\n    ownerToIds[_from].pop();\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice Use and override this function with caution. Wrong usage can have serious consequences.\\r\\n   * @dev Assigns a new NFT to an address.\\r\\n   * @param _to Address to wich we want to add the NFT.\\r\\n   * @param _tokenId Which NFT we want to add.\\r\\n   */\\r\\n  function _addNFToken(address _to, uint256 _tokenId) internal virtual override {\\r\\n    require(idToOwner[_tokenId] == address(0), NFT_ALREADY_EXISTS);\\r\\n    idToOwner[_tokenId] = _to;\\r\\n\\r\\n    ownerToIds[_to].push(_tokenId);\\r\\n    idToOwnerIndex[_tokenId] = ownerToIds[_to].length - 1;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   *\\u00a0@dev Helper function that gets NFT count of owner. This is needed for overriding in enumerable\\r\\n   * extension to remove double storage(gas optimization) of owner NFT count.\\r\\n   * @param _owner Address for whom to query the count.\\r\\n   * @return Number of _owner NFTs.\\r\\n   */\\r\\n  function _getOwnerNFTCount(address _owner) internal view virtual override returns (uint256) {\\r\\n    return ownerToIds[_owner].length;\\r\\n  }\\r\\n}\\r\\n\",\"keccak256\":\"0xb4d9754cc764fdfc8a034509a402cf725179cf858715e529eba292640649d735\",\"license\":\"MIT\"},\"contracts/tokens/nf-token.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"./erc721.sol\\\";\\r\\nimport \\\"./erc721-token-receiver.sol\\\";\\r\\nimport \\\"../utils/supports-interface.sol\\\";\\r\\nimport \\\"../utils/address-utils.sol\\\";\\r\\n\\r\\n/**\\r\\n * @dev Implementation of ERC-721 non-fungible token standard.\\r\\n */\\r\\ncontract NFToken is\\r\\n  ERC721,\\r\\n  SupportsInterface\\r\\n{\\r\\n  using AddressUtils for address;\\r\\n\\r\\n  /**\\r\\n   * @dev List of revert message codes. Implementing dApp should handle showing the correct message.\\r\\n   * Based on 0xcert framework error codes.\\r\\n   */\\r\\n  string constant ZERO_ADDRESS = \\\"003001\\\";\\r\\n  string constant NOT_VALID_NFT = \\\"003002\\\";\\r\\n  string constant NOT_OWNER_OR_OPERATOR = \\\"003003\\\";\\r\\n  string constant NOT_OWNER_APPROVED_OR_OPERATOR = \\\"003004\\\";\\r\\n  string constant NOT_ABLE_TO_RECEIVE_NFT = \\\"003005\\\";\\r\\n  string constant NFT_ALREADY_EXISTS = \\\"003006\\\";\\r\\n  string constant NOT_OWNER = \\\"003007\\\";\\r\\n  string constant IS_OWNER = \\\"003008\\\";\\r\\n\\r\\n  /**\\r\\n   * @dev Magic value of a smart contract that can receive NFT.\\r\\n   * Equal to: bytes4(keccak256(\\\"onERC721Received(address,address,uint256,bytes)\\\")).\\r\\n   */\\r\\n  bytes4 internal constant MAGIC_ON_ERC721_RECEIVED = 0x150b7a02;\\r\\n\\r\\n  /**\\r\\n   * @dev A mapping from NFT ID to the address that owns it.\\r\\n   */\\r\\n  mapping (uint256 => address) internal idToOwner;\\r\\n\\r\\n  /**\\r\\n   * @dev Mapping from NFT ID to approved address.\\r\\n   */\\r\\n  mapping (uint256 => address) internal idToApproval;\\r\\n\\r\\n   /**\\r\\n   * @dev Mapping from owner address to count of their tokens.\\r\\n   */\\r\\n  mapping (address => uint256) private ownerToNFTokenCount;\\r\\n\\r\\n  /**\\r\\n   * @dev Mapping from owner address to mapping of operator addresses.\\r\\n   */\\r\\n  mapping (address => mapping (address => bool)) internal ownerToOperators;\\r\\n\\r\\n  /**\\r\\n   * @dev Guarantees that the msg.sender is an owner or operator of the given NFT.\\r\\n   * @param _tokenId ID of the NFT to validate.\\r\\n   */\\r\\n  modifier canOperate(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n  {\\r\\n    address tokenOwner = idToOwner[_tokenId];\\r\\n    require(\\r\\n      tokenOwner == msg.sender || ownerToOperators[tokenOwner][msg.sender],\\r\\n      NOT_OWNER_OR_OPERATOR\\r\\n    );\\r\\n    _;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Guarantees that the msg.sender is allowed to transfer NFT.\\r\\n   * @param _tokenId ID of the NFT to transfer.\\r\\n   */\\r\\n  modifier canTransfer(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n  {\\r\\n    address tokenOwner = idToOwner[_tokenId];\\r\\n    require(\\r\\n      tokenOwner == msg.sender\\r\\n      || idToApproval[_tokenId] == msg.sender\\r\\n      || ownerToOperators[tokenOwner][msg.sender],\\r\\n      NOT_OWNER_APPROVED_OR_OPERATOR\\r\\n    );\\r\\n    _;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Guarantees that _tokenId is a valid Token.\\r\\n   * @param _tokenId ID of the NFT to validate.\\r\\n   */\\r\\n  modifier validNFToken(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n  {\\r\\n    require(idToOwner[_tokenId] != address(0), NOT_VALID_NFT);\\r\\n    _;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Contract constructor.\\r\\n   */\\r\\n  constructor()\\r\\n  {\\r\\n    supportedInterfaces[0x80ac58cd] = true; // ERC721\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice Throws unless `msg.sender` is the current owner, an authorized operator, or the\\r\\n   * approved address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is\\r\\n   * the zero address. Throws if `_tokenId` is not a valid NFT. When transfer is complete, this\\r\\n   * function checks if `_to` is a smart contract (code size > 0). If so, it calls\\r\\n   * `onERC721Received` on `_to` and throws if the return value is not\\r\\n   * `bytes4(keccak256(\\\"onERC721Received(address,uint256,bytes)\\\"))`.\\r\\n   * @dev Transfers the ownership of an NFT from one address to another address. This function can\\r\\n   * be changed to payable.\\r\\n   * @param _from The current owner of the NFT.\\r\\n   * @param _to The new owner.\\r\\n   * @param _tokenId The NFT to transfer.\\r\\n   * @param _data Additional data with no specified format, sent in call to `_to`.\\r\\n   */\\r\\n  function safeTransferFrom(\\r\\n    address _from,\\r\\n    address _to,\\r\\n    uint256 _tokenId,\\r\\n    bytes calldata _data\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n  {\\r\\n    _safeTransferFrom(_from, _to, _tokenId, _data);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This works identically to the other function with an extra data parameter, except this\\r\\n   * function just sets data to \\\"\\\".\\r\\n   * @dev Transfers the ownership of an NFT from one address to another address. This function can\\r\\n   * be changed to payable.\\r\\n   * @param _from The current owner of the NFT.\\r\\n   * @param _to The new owner.\\r\\n   * @param _tokenId The NFT to transfer.\\r\\n   */\\r\\n  function safeTransferFrom(\\r\\n    address _from,\\r\\n    address _to,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n  {\\r\\n    _safeTransferFrom(_from, _to, _tokenId, \\\"\\\");\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice The caller is responsible to confirm that `_to` is capable of receiving NFTs or else\\r\\n   * they may be permanently lost.\\r\\n   * @dev Throws unless `msg.sender` is the current owner, an authorized operator, or the approved\\r\\n   * address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is the zero\\r\\n   * address. Throws if `_tokenId` is not a valid NFT. This function can be changed to payable.\\r\\n   * @param _from The current owner of the NFT.\\r\\n   * @param _to The new owner.\\r\\n   * @param _tokenId The NFT to transfer.\\r\\n   */\\r\\n  function transferFrom(\\r\\n    address _from,\\r\\n    address _to,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n    canTransfer(_tokenId)\\r\\n    validNFToken(_tokenId)\\r\\n  {\\r\\n    address tokenOwner = idToOwner[_tokenId];\\r\\n    require(tokenOwner == _from, NOT_OWNER);\\r\\n    require(_to != address(0), ZERO_ADDRESS);\\r\\n\\r\\n    _transfer(_to, _tokenId);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice The zero address indicates there is no approved address. Throws unless `msg.sender` is\\r\\n   * the current NFT owner, or an authorized operator of the current owner.\\r\\n   * @dev Set or reaffirm the approved address for an NFT. This function can be changed to payable.\\r\\n   * @param _approved Address to be approved for the given NFT ID.\\r\\n   * @param _tokenId ID of the token to be approved.\\r\\n   */\\r\\n  function approve(\\r\\n    address _approved,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n    canOperate(_tokenId)\\r\\n    validNFToken(_tokenId)\\r\\n  {\\r\\n    address tokenOwner = idToOwner[_tokenId];\\r\\n    require(_approved != tokenOwner, IS_OWNER);\\r\\n\\r\\n    idToApproval[_tokenId] = _approved;\\r\\n    emit Approval(tokenOwner, _approved, _tokenId);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This works even if sender doesn't own any tokens at the time.\\r\\n   * @dev Enables or disables approval for a third party (\\\"operator\\\") to manage all of\\r\\n   * `msg.sender`'s assets. It also emits the ApprovalForAll event.\\r\\n   * @param _operator Address to add to the set of authorized operators.\\r\\n   * @param _approved True if the operators is approved, false to revoke approval.\\r\\n   */\\r\\n  function setApprovalForAll(\\r\\n    address _operator,\\r\\n    bool _approved\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n  {\\r\\n    ownerToOperators[msg.sender][_operator] = _approved;\\r\\n    emit ApprovalForAll(msg.sender, _operator, _approved);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Returns the number of NFTs owned by `_owner`. NFTs assigned to the zero address are\\r\\n   * considered invalid, and this function throws for queries about the zero address.\\r\\n   * @param _owner Address for whom to query the balance.\\r\\n   * @return Balance of _owner.\\r\\n   */\\r\\n  function balanceOf(\\r\\n    address _owner\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n    view\\r\\n    returns (uint256)\\r\\n  {\\r\\n    require(_owner != address(0), ZERO_ADDRESS);\\r\\n    return _getOwnerNFTCount(_owner);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Returns the address of the owner of the NFT. NFTs assigned to the zero address are\\r\\n   * considered invalid, and queries about them do throw.\\r\\n   * @param _tokenId The identifier for an NFT.\\r\\n   * @return _owner Address of _tokenId owner.\\r\\n   */\\r\\n  function ownerOf(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n    view\\r\\n    returns (address _owner)\\r\\n  {\\r\\n    _owner = idToOwner[_tokenId];\\r\\n    require(_owner != address(0), NOT_VALID_NFT);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice Throws if `_tokenId` is not a valid NFT.\\r\\n   * @dev Get the approved address for a single NFT.\\r\\n   * @param _tokenId ID of the NFT to query the approval of.\\r\\n   * @return Address that _tokenId is approved for.\\r\\n   */\\r\\n  function getApproved(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n    view\\r\\n    validNFToken(_tokenId)\\r\\n    returns (address)\\r\\n  {\\r\\n    return idToApproval[_tokenId];\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Checks if `_operator` is an approved operator for `_owner`.\\r\\n   * @param _owner The address that owns the NFTs.\\r\\n   * @param _operator The address that acts on behalf of the owner.\\r\\n   * @return True if approved for all, false otherwise.\\r\\n   */\\r\\n  function isApprovedForAll(\\r\\n    address _owner,\\r\\n    address _operator\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n    view\\r\\n    returns (bool)\\r\\n  {\\r\\n    return ownerToOperators[_owner][_operator];\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice Does NO checks.\\r\\n   * @dev Actually performs the transfer.\\r\\n   * @param _to Address of a new owner.\\r\\n   * @param _tokenId The NFT that is being transferred.\\r\\n   */\\r\\n  function _transfer(\\r\\n    address _to,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    internal\\r\\n    virtual\\r\\n  {\\r\\n    address from = idToOwner[_tokenId];\\r\\n    _clearApproval(_tokenId);\\r\\n\\r\\n    _removeNFToken(from, _tokenId);\\r\\n    _addNFToken(_to, _tokenId);\\r\\n\\r\\n    emit Transfer(from, _to, _tokenId);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This is an internal function which should be called from user-implemented external\\r\\n   * mint function. Its purpose is to show and properly initialize data structures when using this\\r\\n   * implementation.\\r\\n   * @dev Mints a new NFT.\\r\\n   * @param _to The address that will own the minted NFT.\\r\\n   * @param _tokenId of the NFT to be minted by the msg.sender.\\r\\n   */\\r\\n  function _mint(\\r\\n    address _to,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    internal\\r\\n    virtual\\r\\n  {\\r\\n    require(_to != address(0), ZERO_ADDRESS);\\r\\n    require(idToOwner[_tokenId] == address(0), NFT_ALREADY_EXISTS);\\r\\n\\r\\n    _addNFToken(_to, _tokenId);\\r\\n\\r\\n    emit Transfer(address(0), _to, _tokenId);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice This is an internal function which should be called from user-implemented external burn\\r\\n   * function. Its purpose is to show and properly initialize data structures when using this\\r\\n   * implementation. Also, note that this burn implementation allows the minter to re-mint a burned\\r\\n   * NFT.\\r\\n   * @dev Burns a NFT.\\r\\n   * @param _tokenId ID of the NFT to be burned.\\r\\n   */\\r\\n  function _burn(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    internal\\r\\n    virtual\\r\\n    validNFToken(_tokenId)\\r\\n  {\\r\\n    address tokenOwner = idToOwner[_tokenId];\\r\\n    _clearApproval(_tokenId);\\r\\n    _removeNFToken(tokenOwner, _tokenId);\\r\\n    emit Transfer(tokenOwner, address(0), _tokenId);\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice Use and override this function with caution. Wrong usage can have serious consequences.\\r\\n   * @dev Removes a NFT from owner.\\r\\n   * @param _from Address from which we want to remove the NFT.\\r\\n   * @param _tokenId Which NFT we want to remove.\\r\\n   */\\r\\n  function _removeNFToken(\\r\\n    address _from,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    internal\\r\\n    virtual\\r\\n  {\\r\\n    require(idToOwner[_tokenId] == _from, NOT_OWNER);\\r\\n    ownerToNFTokenCount[_from] -= 1;\\r\\n    delete idToOwner[_tokenId];\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @notice Use and override this function with caution. Wrong usage can have serious consequences.\\r\\n   * @dev Assigns a new NFT to owner.\\r\\n   * @param _to Address to which we want to add the NFT.\\r\\n   * @param _tokenId Which NFT we want to add.\\r\\n   */\\r\\n  function _addNFToken(\\r\\n    address _to,\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    internal\\r\\n    virtual\\r\\n  {\\r\\n    require(idToOwner[_tokenId] == address(0), NFT_ALREADY_EXISTS);\\r\\n\\r\\n    idToOwner[_tokenId] = _to;\\r\\n    ownerToNFTokenCount[_to] += 1;\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   *\\u00a0@dev Helper function that gets NFT count of owner. This is needed for overriding in enumerable\\r\\n   * extension to remove double storage (gas optimization) of owner NFT count.\\r\\n   * @param _owner Address for whom to query the count.\\r\\n   * @return Number of _owner NFTs.\\r\\n   */\\r\\n  function _getOwnerNFTCount(\\r\\n    address _owner\\r\\n  )\\r\\n    internal\\r\\n    virtual\\r\\n    view\\r\\n    returns (uint256)\\r\\n  {\\r\\n    return ownerToNFTokenCount[_owner];\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Actually perform the safeTransferFrom.\\r\\n   * @param _from The current owner of the NFT.\\r\\n   * @param _to The new owner.\\r\\n   * @param _tokenId The NFT to transfer.\\r\\n   * @param _data Additional data with no specified format, sent in call to `_to`.\\r\\n   */\\r\\n  function _safeTransferFrom(\\r\\n    address _from,\\r\\n    address _to,\\r\\n    uint256 _tokenId,\\r\\n    bytes memory _data\\r\\n  )\\r\\n    private\\r\\n    canTransfer(_tokenId)\\r\\n    validNFToken(_tokenId)\\r\\n  {\\r\\n    address tokenOwner = idToOwner[_tokenId];\\r\\n    require(tokenOwner == _from, NOT_OWNER);\\r\\n    require(_to != address(0), ZERO_ADDRESS);\\r\\n\\r\\n    _transfer(_to, _tokenId);\\r\\n\\r\\n    if (_to.isContract())\\r\\n    {\\r\\n      bytes4 retval = ERC721TokenReceiver(_to).onERC721Received(msg.sender, _from, _tokenId, _data);\\r\\n      require(retval == MAGIC_ON_ERC721_RECEIVED, NOT_ABLE_TO_RECEIVE_NFT);\\r\\n    }\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Clears the current approval of a given NFT ID.\\r\\n   * @param _tokenId ID of the NFT to be transferred.\\r\\n   */\\r\\n  function _clearApproval(\\r\\n    uint256 _tokenId\\r\\n  )\\r\\n    private\\r\\n  {\\r\\n    delete idToApproval[_tokenId];\\r\\n  }\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0xfff2e5aebf810461534c4eea537e7654a48a2bccb97f6d1beafff5447fcc696c\",\"license\":\"MIT\"},\"contracts/utils/address-utils.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\n/**\\r\\n * @notice Based on:\\r\\n * https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Address.sol\\r\\n * Requires EIP-1052.\\r\\n * @dev Utility library of inline functions on addresses.\\r\\n */\\r\\nlibrary AddressUtils\\r\\n{\\r\\n\\r\\n  /**\\r\\n   * @dev Returns whether the target address is a contract.\\r\\n   * @param _addr Address to check.\\r\\n   * @return addressCheck True if _addr is a contract, false if not.\\r\\n   */\\r\\n  function isContract(\\r\\n    address _addr\\r\\n  )\\r\\n    internal\\r\\n    view\\r\\n    returns (bool addressCheck)\\r\\n  {\\r\\n    // This method relies in extcodesize, which returns 0 for contracts in\\r\\n    // construction, since the code is only stored at the end of the\\r\\n    // constructor execution.\\r\\n\\r\\n    // According to EIP-1052, 0x0 is the value returned for not-yet created accounts\\r\\n    // and 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470 is returned\\r\\n    // for accounts without code, i.e. `keccak256('')`\\r\\n    bytes32 codehash;\\r\\n    bytes32 accountHash = 0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470;\\r\\n    assembly { codehash := extcodehash(_addr) } // solhint-disable-line\\r\\n    addressCheck = (codehash != 0x0 && codehash != accountHash);\\r\\n  }\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x29cdeb28f1e34c1239b2f82d689e0ffd6b8a95daf603d5433c893074f3ccb7f9\",\"license\":\"MIT\"},\"contracts/utils/erc165.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\n/**\\r\\n * @dev A standard for detecting smart contract interfaces. \\r\\n * See: https://eips.ethereum.org/EIPS/eip-165.\\r\\n */\\r\\ninterface ERC165\\r\\n{\\r\\n\\r\\n  /**\\r\\n   * @dev Checks if the smart contract includes a specific interface.\\r\\n   * This function uses less than 30,000 gas.\\r\\n   * @param _interfaceID The interface identifier, as specified in ERC-165.\\r\\n   * @return True if _interfaceID is supported, false otherwise.\\r\\n   */\\r\\n  function supportsInterface(\\r\\n    bytes4 _interfaceID\\r\\n  )\\r\\n    external\\r\\n    view\\r\\n    returns (bool);\\r\\n    \\r\\n}\\r\\n\",\"keccak256\":\"0xd8c18f29926bf75aace3103a010f542399b6975d3f0a76e8b3f07f4c2fd55b0a\",\"license\":\"MIT\"},\"contracts/utils/supports-interface.sol\":{\"content\":\"// SPDX-License-Identifier: MIT\\r\\npragma solidity ^0.8.0;\\r\\n\\r\\nimport \\\"./erc165.sol\\\";\\r\\n\\r\\n/**\\r\\n * @dev Implementation of standard for detect smart contract interfaces.\\r\\n */\\r\\ncontract SupportsInterface is\\r\\n  ERC165\\r\\n{\\r\\n\\r\\n  /**\\r\\n   * @dev Mapping of supported intefraces. You must not set element 0xffffffff to true.\\r\\n   */\\r\\n  mapping(bytes4 => bool) internal supportedInterfaces;\\r\\n\\r\\n  /**\\r\\n   * @dev Contract constructor.\\r\\n   */\\r\\n  constructor()\\r\\n  {\\r\\n    supportedInterfaces[0x01ffc9a7] = true; // ERC165\\r\\n  }\\r\\n\\r\\n  /**\\r\\n   * @dev Function to check which interfaces are suported by this contract.\\r\\n   * @param _interfaceID Id of the interface.\\r\\n   * @return True if _interfaceID is supported, false otherwise.\\r\\n   */\\r\\n  function supportsInterface(\\r\\n    bytes4 _interfaceID\\r\\n  )\\r\\n    external\\r\\n    override\\r\\n    view\\r\\n    returns (bool)\\r\\n  {\\r\\n    return supportedInterfaces[_interfaceID];\\r\\n  }\\r\\n\\r\\n}\\r\\n\",\"keccak256\":\"0x1efe9984a265a0e4a2f2d795770e97419c2f265805a83b9a2b5502e5f8c36616\",\"license\":\"MIT\"}},\"version\":1}",
+  "bytecode": "0x60806040523480156200001157600080fd5b50600060208181527f67be87c3ff9960ca1e9cfac5cab2ff4747269cf9ed20c9b7306235ac35a491c58054600160ff1991821681179092557ff7815fccbf112960a73756e185887fedcb9fc64ca0a16cc5923b7960ed78080080548216831790557f77b7bbe0e49b76487c9476b5db3354cf5270619d0037ccb899c2a4c4a75b43188054821683179055635b5e139f60e01b9093527f9562381dfbc2d8b8b66e765249f330164b73e329e5f01670660643571d1974df8054909316179091556040805180820190915260098082526814d413d3d38813919560ba1b919092019081526200010291600591906200013d565b506040805180820190915260058082526429a827a7a760d91b602090920191825262000131916006916200013d565b50600060075562000220565b8280546200014b90620001e3565b90600052602060002090601f0160209004810192826200016f5760008555620001ba565b82601f106200018a57805160ff1916838001178555620001ba565b82800160010185558215620001ba579182015b82811115620001ba5782518255916020019190600101906200019d565b50620001c8929150620001cc565b5090565b5b80821115620001c85760008155600101620001cd565b600181811c90821680620001f857607f821691505b602082108114156200021a57634e487b7160e01b600052602260045260246000fd5b50919050565b61177780620002306000396000f3fe608060405234801561001057600080fd5b506004361061011b5760003560e01c80634f6ccce7116100b2578063a22cb46511610081578063c87b56dd11610066578063c87b56dd14610269578063d0def5211461027c578063e985e9c51461028f57600080fd5b8063a22cb46514610243578063b88d4fde1461025657600080fd5b80634f6ccce7146102025780636352211e1461021557806370a082311461022857806395d89b411461023b57600080fd5b806318160ddd116100ee57806318160ddd146101b757806323b872dd146101c95780632f745c59146101dc57806342842e0e146101ef57600080fd5b806301ffc9a71461012057806306fdde0314610162578063081812fc14610177578063095ea7b3146101a2575b600080fd5b61014d61012e3660046115b9565b6001600160e01b03191660009081526020819052604090205460ff1690565b60405190151581526020015b60405180910390f35b61016a6102cb565b6040516101599190611695565b61018a6101853660046115f3565b61035d565b6040516001600160a01b039091168152602001610159565b6101b56101b036600461158f565b6103df565b005b6009545b604051908152602001610159565b6101b56101d7366004611455565b6105af565b6101bb6101ea36600461158f565b61076a565b6101b56101fd366004611455565b610801565b6101bb6102103660046115f3565b610821565b61018a6102233660046115f3565b610889565b6101bb610236366004611407565b6108e1565b61016a610945565b6101b5610251366004611500565b610954565b6101b5610264366004611491565b6109c0565b61016a6102773660046115f3565b610a09565b6101b561028a36600461153c565b610a75565b61014d61029d366004611422565b6001600160a01b03918216600090815260046020908152604080832093909416825291909152205460ff1690565b6060600580546102da906116bf565b80601f0160208091040260200160405190810160405280929190818152602001828054610306906116bf565b80156103535780601f1061032857610100808354040283529160200191610353565b820191906000526020600020905b81548152906001019060200180831161033657829003601f168201915b5050505050905090565b6000818152600160209081526040808320548151808301909252600682526518181998181960d11b9282019290925283916001600160a01b03166103bd5760405162461bcd60e51b81526004016103b49190611695565b60405180910390fd5b506000838152600260205260409020546001600160a01b031691505b50919050565b60008181526001602052604090205481906001600160a01b03163381148061042a57506001600160a01b038116600090815260046020908152604080832033845290915290205460ff165b6040518060400160405280600681526020017f30303330303300000000000000000000000000000000000000000000000000008152509061047e5760405162461bcd60e51b81526004016103b49190611695565b50600083815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528491906001600160a01b03166104d85760405162461bcd60e51b81526004016103b49190611695565b50600084815260016020908152604091829020548251808401909352600683527f3030333030380000000000000000000000000000000000000000000000000000918301919091526001600160a01b039081169190871682141561054f5760405162461bcd60e51b81526004016103b49190611695565b5060008581526002602052604080822080546001600160a01b0319166001600160a01b038a811691821790925591518893918516917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b92591a4505050505050565b60008181526001602052604090205481906001600160a01b0316338114806105ed57506000828152600260205260409020546001600160a01b031633145b8061061b57506001600160a01b038116600090815260046020908152604080832033845290915290205460ff165b604051806040016040528060068152602001650c0c0ccc0c0d60d21b815250906106585760405162461bcd60e51b81526004016103b49190611695565b50600083815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528491906001600160a01b03166106b25760405162461bcd60e51b81526004016103b49190611695565b50600084815260016020908152604091829020548251808401909352600683526530303330303760d01b918301919091526001600160a01b039081169190881682146107115760405162461bcd60e51b81526004016103b49190611695565b5060408051808201909152600681526530303330303160d01b60208201526001600160a01b0387166107565760405162461bcd60e51b81526004016103b49190611695565b506107618686610ad8565b50505050505050565b6001600160a01b0382166000908152600b60209081526040808320548151808301909252600682526530303530303760d01b928201929092529083106107c35760405162461bcd60e51b81526004016103b49190611695565b506001600160a01b0383166000908152600b602052604090208054839081106107ee576107ee61173b565b9060005260206000200154905092915050565b61081c83838360405180602001604052806000815250610b63565b505050565b60095460408051808201909152600681526530303530303760d01b602082015260009183106108635760405162461bcd60e51b81526004016103b49190611695565b50600982815481106108775761087761173b565b90600052602060002001549050919050565b600081815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091526001600160a01b031690816103d95760405162461bcd60e51b81526004016103b49190611695565b60408051808201909152600681526530303330303160d01b60208201526000906001600160a01b0383166109285760405162461bcd60e51b81526004016103b49190611695565b50506001600160a01b03166000908152600b602052604090205490565b6060600680546102da906116bf565b3360008181526004602090815260408083206001600160a01b03871680855290835292819020805460ff191686151590811790915590519081529192917f17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31910160405180910390a35050565b610a0285858585858080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250610b6392505050565b5050505050565b600081815260016020908152604091829020548251808401909352600683526518181998181960d11b9183019190915260609183916001600160a01b0316610a645760405162461bcd60e51b81526004016103b49190611695565b50610a6e83610e28565b9392505050565b60078054906000610a85836116f4565b9190505550610a9683600754610eca565b61081c60075483838080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250610f2a92505050565b600081815260016020908152604080832054600290925290912080546001600160a01b03191690556001600160a01b0316610b138183610fa9565b610b1d8383611126565b81836001600160a01b0316826001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef60405160405180910390a4505050565b60008281526001602052604090205482906001600160a01b031633811480610ba157506000828152600260205260409020546001600160a01b031633145b80610bcf57506001600160a01b038116600090815260046020908152604080832033845290915290205460ff165b604051806040016040528060068152602001650c0c0ccc0c0d60d21b81525090610c0c5760405162461bcd60e51b81526004016103b49190611695565b50600084815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528591906001600160a01b0316610c665760405162461bcd60e51b81526004016103b49190611695565b50600085815260016020908152604091829020548251808401909352600683526530303330303760d01b918301919091526001600160a01b03908116919089168214610cc55760405162461bcd60e51b81526004016103b49190611695565b5060408051808201909152600681526530303330303160d01b60208201526001600160a01b038816610d0a5760405162461bcd60e51b81526004016103b49190611695565b50610d158787610ad8565b610d27876001600160a01b03166111ea565b15610e1e57604051630a85bd0160e11b81526000906001600160a01b0389169063150b7a0290610d619033908d908c908c90600401611659565b602060405180830381600087803b158015610d7b57600080fd5b505af1158015610d8f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610db391906115d6565b60408051808201909152600681527f303033303035000000000000000000000000000000000000000000000000000060208201529091506001600160e01b03198216630a85bd0160e11b14610e1b5760405162461bcd60e51b81526004016103b49190611695565b50505b5050505050505050565b6000818152600860205260409020805460609190610e45906116bf565b80601f0160208091040260200160405190810160405280929190818152602001828054610e71906116bf565b8015610ebe5780601f10610e9357610100808354040283529160200191610ebe565b820191906000526020600020905b815481529060010190602001808311610ea157829003601f168201915b50505050509050919050565b610ed48282611226565b600980546001818101835560008390527f6e1540171b6c0c960b71a7020d9f60077f6af931a8bbf590da0223dacf75c7af9091018390559054610f1791906116a8565b6000918252600a60205260409091205550565b600082815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528391906001600160a01b0316610f835760405162461bcd60e51b81526004016103b49190611695565b5060008381526008602090815260409091208351610fa392850190611309565b50505050565b600081815260016020908152604091829020548251808401909352600683526530303330303760d01b918301919091526001600160a01b038481169116146110045760405162461bcd60e51b81526004016103b49190611695565b50600081815260016020818152604080842080546001600160a01b0319169055600c8252808420546001600160a01b0387168552600b90925283205490929161104c916116a8565b90508181146110e3576001600160a01b0384166000908152600b6020526040812080548390811061107f5761107f61173b565b9060005260206000200154905080600b6000876001600160a01b03166001600160a01b0316815260200190815260200160002084815481106110c3576110c361173b565b6000918252602080832090910192909255918252600c9052604090208290555b6001600160a01b0384166000908152600b6020526040902080548061110a5761110a611725565b6001900381819060005260206000200160009055905550505050565b600081815260016020908152604091829020548251808401909352600683526518181998181b60d11b918301919091526001600160a01b03161561117d5760405162461bcd60e51b81526004016103b49190611695565b50600081815260016020818152604080842080546001600160a01b0319166001600160a01b038816908117909155808552600b83529084208054808501825581865292852090920185905590925290546111d791906116a8565b6000918252600c60205260409091205550565b6000813f7fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470811580159061121e5750808214155b949350505050565b60408051808201909152600681526530303330303160d01b60208201526001600160a01b03831661126a5760405162461bcd60e51b81526004016103b49190611695565b50600081815260016020908152604091829020548251808401909352600683526518181998181b60d11b918301919091526001600160a01b0316156112c25760405162461bcd60e51b81526004016103b49190611695565b506112cd8282611126565b60405181906001600160a01b038416906000907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef908290a45050565b828054611315906116bf565b90600052602060002090601f016020900481019282611337576000855561137d565b82601f1061135057805160ff191683800117855561137d565b8280016001018555821561137d579182015b8281111561137d578251825591602001919060010190611362565b5061138992915061138d565b5090565b5b80821115611389576000815560010161138e565b80356001600160a01b03811681146113b957600080fd5b919050565b60008083601f8401126113d057600080fd5b50813567ffffffffffffffff8111156113e857600080fd5b60208301915083602082850101111561140057600080fd5b9250929050565b60006020828403121561141957600080fd5b610a6e826113a2565b6000806040838503121561143557600080fd5b61143e836113a2565b915061144c602084016113a2565b90509250929050565b60008060006060848603121561146a57600080fd5b611473846113a2565b9250611481602085016113a2565b9150604084013590509250925092565b6000806000806000608086880312156114a957600080fd5b6114b2866113a2565b94506114c0602087016113a2565b935060408601359250606086013567ffffffffffffffff8111156114e357600080fd5b6114ef888289016113be565b969995985093965092949392505050565b6000806040838503121561151357600080fd5b61151c836113a2565b91506020830135801515811461153157600080fd5b809150509250929050565b60008060006040848603121561155157600080fd5b61155a846113a2565b9250602084013567ffffffffffffffff81111561157657600080fd5b611582868287016113be565b9497909650939450505050565b600080604083850312156115a257600080fd5b6115ab836113a2565b946020939093013593505050565b6000602082840312156115cb57600080fd5b8135610a6e81611751565b6000602082840312156115e857600080fd5b8151610a6e81611751565b60006020828403121561160557600080fd5b5035919050565b6000815180845260005b8181101561163257602081850181015186830182015201611616565b81811115611644576000602083870101525b50601f01601f19169290920160200192915050565b60006001600160a01b0380871683528086166020840152508360408301526080606083015261168b608083018461160c565b9695505050505050565b602081526000610a6e602083018461160c565b6000828210156116ba576116ba61170f565b500390565b600181811c908216806116d357607f821691505b602082108114156103d957634e487b7160e01b600052602260045260246000fd5b60006000198214156117085761170861170f565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052603160045260246000fd5b634e487b7160e01b600052603260045260246000fd5b6001600160e01b03198116811461176757600080fd5b5056fea164736f6c6343000807000a",
+  "deployedBytecode": "0x608060405234801561001057600080fd5b506004361061011b5760003560e01c80634f6ccce7116100b2578063a22cb46511610081578063c87b56dd11610066578063c87b56dd14610269578063d0def5211461027c578063e985e9c51461028f57600080fd5b8063a22cb46514610243578063b88d4fde1461025657600080fd5b80634f6ccce7146102025780636352211e1461021557806370a082311461022857806395d89b411461023b57600080fd5b806318160ddd116100ee57806318160ddd146101b757806323b872dd146101c95780632f745c59146101dc57806342842e0e146101ef57600080fd5b806301ffc9a71461012057806306fdde0314610162578063081812fc14610177578063095ea7b3146101a2575b600080fd5b61014d61012e3660046115b9565b6001600160e01b03191660009081526020819052604090205460ff1690565b60405190151581526020015b60405180910390f35b61016a6102cb565b6040516101599190611695565b61018a6101853660046115f3565b61035d565b6040516001600160a01b039091168152602001610159565b6101b56101b036600461158f565b6103df565b005b6009545b604051908152602001610159565b6101b56101d7366004611455565b6105af565b6101bb6101ea36600461158f565b61076a565b6101b56101fd366004611455565b610801565b6101bb6102103660046115f3565b610821565b61018a6102233660046115f3565b610889565b6101bb610236366004611407565b6108e1565b61016a610945565b6101b5610251366004611500565b610954565b6101b5610264366004611491565b6109c0565b61016a6102773660046115f3565b610a09565b6101b561028a36600461153c565b610a75565b61014d61029d366004611422565b6001600160a01b03918216600090815260046020908152604080832093909416825291909152205460ff1690565b6060600580546102da906116bf565b80601f0160208091040260200160405190810160405280929190818152602001828054610306906116bf565b80156103535780601f1061032857610100808354040283529160200191610353565b820191906000526020600020905b81548152906001019060200180831161033657829003601f168201915b5050505050905090565b6000818152600160209081526040808320548151808301909252600682526518181998181960d11b9282019290925283916001600160a01b03166103bd5760405162461bcd60e51b81526004016103b49190611695565b60405180910390fd5b506000838152600260205260409020546001600160a01b031691505b50919050565b60008181526001602052604090205481906001600160a01b03163381148061042a57506001600160a01b038116600090815260046020908152604080832033845290915290205460ff165b6040518060400160405280600681526020017f30303330303300000000000000000000000000000000000000000000000000008152509061047e5760405162461bcd60e51b81526004016103b49190611695565b50600083815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528491906001600160a01b03166104d85760405162461bcd60e51b81526004016103b49190611695565b50600084815260016020908152604091829020548251808401909352600683527f3030333030380000000000000000000000000000000000000000000000000000918301919091526001600160a01b039081169190871682141561054f5760405162461bcd60e51b81526004016103b49190611695565b5060008581526002602052604080822080546001600160a01b0319166001600160a01b038a811691821790925591518893918516917f8c5be1e5ebec7d5bd14f71427d1e84f3dd0314c0f7b2291e5b200ac8c7c3b92591a4505050505050565b60008181526001602052604090205481906001600160a01b0316338114806105ed57506000828152600260205260409020546001600160a01b031633145b8061061b57506001600160a01b038116600090815260046020908152604080832033845290915290205460ff165b604051806040016040528060068152602001650c0c0ccc0c0d60d21b815250906106585760405162461bcd60e51b81526004016103b49190611695565b50600083815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528491906001600160a01b03166106b25760405162461bcd60e51b81526004016103b49190611695565b50600084815260016020908152604091829020548251808401909352600683526530303330303760d01b918301919091526001600160a01b039081169190881682146107115760405162461bcd60e51b81526004016103b49190611695565b5060408051808201909152600681526530303330303160d01b60208201526001600160a01b0387166107565760405162461bcd60e51b81526004016103b49190611695565b506107618686610ad8565b50505050505050565b6001600160a01b0382166000908152600b60209081526040808320548151808301909252600682526530303530303760d01b928201929092529083106107c35760405162461bcd60e51b81526004016103b49190611695565b506001600160a01b0383166000908152600b602052604090208054839081106107ee576107ee61173b565b9060005260206000200154905092915050565b61081c83838360405180602001604052806000815250610b63565b505050565b60095460408051808201909152600681526530303530303760d01b602082015260009183106108635760405162461bcd60e51b81526004016103b49190611695565b50600982815481106108775761087761173b565b90600052602060002001549050919050565b600081815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091526001600160a01b031690816103d95760405162461bcd60e51b81526004016103b49190611695565b60408051808201909152600681526530303330303160d01b60208201526000906001600160a01b0383166109285760405162461bcd60e51b81526004016103b49190611695565b50506001600160a01b03166000908152600b602052604090205490565b6060600680546102da906116bf565b3360008181526004602090815260408083206001600160a01b03871680855290835292819020805460ff191686151590811790915590519081529192917f17307eab39ab6107e8899845ad3d59bd9653f200f220920489ca2b5937696c31910160405180910390a35050565b610a0285858585858080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250610b6392505050565b5050505050565b600081815260016020908152604091829020548251808401909352600683526518181998181960d11b9183019190915260609183916001600160a01b0316610a645760405162461bcd60e51b81526004016103b49190611695565b50610a6e83610e28565b9392505050565b60078054906000610a85836116f4565b9190505550610a9683600754610eca565b61081c60075483838080601f016020809104026020016040519081016040528093929190818152602001838380828437600092019190915250610f2a92505050565b600081815260016020908152604080832054600290925290912080546001600160a01b03191690556001600160a01b0316610b138183610fa9565b610b1d8383611126565b81836001600160a01b0316826001600160a01b03167fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef60405160405180910390a4505050565b60008281526001602052604090205482906001600160a01b031633811480610ba157506000828152600260205260409020546001600160a01b031633145b80610bcf57506001600160a01b038116600090815260046020908152604080832033845290915290205460ff165b604051806040016040528060068152602001650c0c0ccc0c0d60d21b81525090610c0c5760405162461bcd60e51b81526004016103b49190611695565b50600084815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528591906001600160a01b0316610c665760405162461bcd60e51b81526004016103b49190611695565b50600085815260016020908152604091829020548251808401909352600683526530303330303760d01b918301919091526001600160a01b03908116919089168214610cc55760405162461bcd60e51b81526004016103b49190611695565b5060408051808201909152600681526530303330303160d01b60208201526001600160a01b038816610d0a5760405162461bcd60e51b81526004016103b49190611695565b50610d158787610ad8565b610d27876001600160a01b03166111ea565b15610e1e57604051630a85bd0160e11b81526000906001600160a01b0389169063150b7a0290610d619033908d908c908c90600401611659565b602060405180830381600087803b158015610d7b57600080fd5b505af1158015610d8f573d6000803e3d6000fd5b505050506040513d601f19601f82011682018060405250810190610db391906115d6565b60408051808201909152600681527f303033303035000000000000000000000000000000000000000000000000000060208201529091506001600160e01b03198216630a85bd0160e11b14610e1b5760405162461bcd60e51b81526004016103b49190611695565b50505b5050505050505050565b6000818152600860205260409020805460609190610e45906116bf565b80601f0160208091040260200160405190810160405280929190818152602001828054610e71906116bf565b8015610ebe5780601f10610e9357610100808354040283529160200191610ebe565b820191906000526020600020905b815481529060010190602001808311610ea157829003601f168201915b50505050509050919050565b610ed48282611226565b600980546001818101835560008390527f6e1540171b6c0c960b71a7020d9f60077f6af931a8bbf590da0223dacf75c7af9091018390559054610f1791906116a8565b6000918252600a60205260409091205550565b600082815260016020908152604091829020548251808401909352600683526518181998181960d11b918301919091528391906001600160a01b0316610f835760405162461bcd60e51b81526004016103b49190611695565b5060008381526008602090815260409091208351610fa392850190611309565b50505050565b600081815260016020908152604091829020548251808401909352600683526530303330303760d01b918301919091526001600160a01b038481169116146110045760405162461bcd60e51b81526004016103b49190611695565b50600081815260016020818152604080842080546001600160a01b0319169055600c8252808420546001600160a01b0387168552600b90925283205490929161104c916116a8565b90508181146110e3576001600160a01b0384166000908152600b6020526040812080548390811061107f5761107f61173b565b9060005260206000200154905080600b6000876001600160a01b03166001600160a01b0316815260200190815260200160002084815481106110c3576110c361173b565b6000918252602080832090910192909255918252600c9052604090208290555b6001600160a01b0384166000908152600b6020526040902080548061110a5761110a611725565b6001900381819060005260206000200160009055905550505050565b600081815260016020908152604091829020548251808401909352600683526518181998181b60d11b918301919091526001600160a01b03161561117d5760405162461bcd60e51b81526004016103b49190611695565b50600081815260016020818152604080842080546001600160a01b0319166001600160a01b038816908117909155808552600b83529084208054808501825581865292852090920185905590925290546111d791906116a8565b6000918252600c60205260409091205550565b6000813f7fc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470811580159061121e5750808214155b949350505050565b60408051808201909152600681526530303330303160d01b60208201526001600160a01b03831661126a5760405162461bcd60e51b81526004016103b49190611695565b50600081815260016020908152604091829020548251808401909352600683526518181998181b60d11b918301919091526001600160a01b0316156112c25760405162461bcd60e51b81526004016103b49190611695565b506112cd8282611126565b60405181906001600160a01b038416906000907fddf252ad1be2c89b69c2b068fc378daa952ba7f163c4a11628f55a4df523b3ef908290a45050565b828054611315906116bf565b90600052602060002090601f016020900481019282611337576000855561137d565b82601f1061135057805160ff191683800117855561137d565b8280016001018555821561137d579182015b8281111561137d578251825591602001919060010190611362565b5061138992915061138d565b5090565b5b80821115611389576000815560010161138e565b80356001600160a01b03811681146113b957600080fd5b919050565b60008083601f8401126113d057600080fd5b50813567ffffffffffffffff8111156113e857600080fd5b60208301915083602082850101111561140057600080fd5b9250929050565b60006020828403121561141957600080fd5b610a6e826113a2565b6000806040838503121561143557600080fd5b61143e836113a2565b915061144c602084016113a2565b90509250929050565b60008060006060848603121561146a57600080fd5b611473846113a2565b9250611481602085016113a2565b9150604084013590509250925092565b6000806000806000608086880312156114a957600080fd5b6114b2866113a2565b94506114c0602087016113a2565b935060408601359250606086013567ffffffffffffffff8111156114e357600080fd5b6114ef888289016113be565b969995985093965092949392505050565b6000806040838503121561151357600080fd5b61151c836113a2565b91506020830135801515811461153157600080fd5b809150509250929050565b60008060006040848603121561155157600080fd5b61155a846113a2565b9250602084013567ffffffffffffffff81111561157657600080fd5b611582868287016113be565b9497909650939450505050565b600080604083850312156115a257600080fd5b6115ab836113a2565b946020939093013593505050565b6000602082840312156115cb57600080fd5b8135610a6e81611751565b6000602082840312156115e857600080fd5b8151610a6e81611751565b60006020828403121561160557600080fd5b5035919050565b6000815180845260005b8181101561163257602081850181015186830182015201611616565b81811115611644576000602083870101525b50601f01601f19169290920160200192915050565b60006001600160a01b0380871683528086166020840152508360408301526080606083015261168b608083018461160c565b9695505050505050565b602081526000610a6e602083018461160c565b6000828210156116ba576116ba61170f565b500390565b600181811c908216806116d357607f821691505b602082108114156103d957634e487b7160e01b600052602260045260246000fd5b60006000198214156117085761170861170f565b5060010190565b634e487b7160e01b600052601160045260246000fd5b634e487b7160e01b600052603160045260246000fd5b634e487b7160e01b600052603260045260246000fd5b6001600160e01b03198116811461176757600080fd5b5056fea164736f6c6343000807000a",
+  "devdoc": {
+    "details": "Optional enumeration implementation for ERC-721 non-fungible token standard.",
+    "kind": "dev",
+    "methods": {
+      "approve(address,uint256)": {
+        "details": "Set or reaffirm the approved address for an NFT. This function can be changed to payable.",
+        "params": {
+          "_approved": "Address to be approved for the given NFT ID.",
+          "_tokenId": "ID of the token to be approved."
+        }
+      },
+      "balanceOf(address)": {
+        "details": "Returns the number of NFTs owned by `_owner`. NFTs assigned to the zero address are considered invalid, and this function throws for queries about the zero address.",
+        "params": {
+          "_owner": "Address for whom to query the balance."
+        },
+        "returns": {
+          "_0": "Balance of _owner."
+        }
+      },
+      "constructor": {
+        "details": "Contract constructor."
+      },
+      "getApproved(uint256)": {
+        "details": "Get the approved address for a single NFT.",
+        "params": {
+          "_tokenId": "ID of the NFT to query the approval of."
+        },
+        "returns": {
+          "_0": "Address that _tokenId is approved for."
+        }
+      },
+      "isApprovedForAll(address,address)": {
+        "details": "Checks if `_operator` is an approved operator for `_owner`.",
+        "params": {
+          "_operator": "The address that acts on behalf of the owner.",
+          "_owner": "The address that owns the NFTs."
+        },
+        "returns": {
+          "_0": "True if approved for all, false otherwise."
+        }
+      },
+      "name()": {
+        "details": "Returns a descriptive name for a collection of NFTokens.",
+        "returns": {
+          "_name": "Representing name."
+        }
+      },
+      "ownerOf(uint256)": {
+        "details": "Returns the address of the owner of the NFT. NFTs assigned to the zero address are considered invalid, and queries about them do throw.",
+        "params": {
+          "_tokenId": "The identifier for an NFT."
+        },
+        "returns": {
+          "_owner": "Address of _tokenId owner."
+        }
+      },
+      "safeTransferFrom(address,address,uint256)": {
+        "details": "Transfers the ownership of an NFT from one address to another address. This function can be changed to payable.",
+        "params": {
+          "_from": "The current owner of the NFT.",
+          "_to": "The new owner.",
+          "_tokenId": "The NFT to transfer."
+        }
+      },
+      "safeTransferFrom(address,address,uint256,bytes)": {
+        "details": "Transfers the ownership of an NFT from one address to another address. This function can be changed to payable.",
+        "params": {
+          "_data": "Additional data with no specified format, sent in call to `_to`.",
+          "_from": "The current owner of the NFT.",
+          "_to": "The new owner.",
+          "_tokenId": "The NFT to transfer."
+        }
+      },
+      "setApprovalForAll(address,bool)": {
+        "details": "Enables or disables approval for a third party (\"operator\") to manage all of `msg.sender`'s assets. It also emits the ApprovalForAll event.",
+        "params": {
+          "_approved": "True if the operators is approved, false to revoke approval.",
+          "_operator": "Address to add to the set of authorized operators."
+        }
+      },
+      "supportsInterface(bytes4)": {
+        "details": "Function to check which interfaces are suported by this contract.",
+        "params": {
+          "_interfaceID": "Id of the interface."
+        },
+        "returns": {
+          "_0": "True if _interfaceID is supported, false otherwise."
+        }
+      },
+      "symbol()": {
+        "details": "Returns an abbreviated name for NFTokens.",
+        "returns": {
+          "_symbol": "Representing symbol."
+        }
+      },
+      "tokenByIndex(uint256)": {
+        "details": "Returns NFT ID by its index.",
+        "params": {
+          "_index": "A counter less than `totalSupply()`."
+        },
+        "returns": {
+          "_0": "Token id."
+        }
+      },
+      "tokenOfOwnerByIndex(address,uint256)": {
+        "details": "returns the n-th NFT ID from a list of owner's tokens.",
+        "params": {
+          "_index": "Index number representing n-th token in owner's list of tokens.",
+          "_owner": "Token owner's address."
+        },
+        "returns": {
+          "_0": "Token id."
+        }
+      },
+      "tokenURI(uint256)": {
+        "details": "A distinct URI (RFC 3986) for a given NFT.",
+        "params": {
+          "_tokenId": "Id for which we want uri."
+        },
+        "returns": {
+          "_0": "URI of _tokenId."
+        }
+      },
+      "totalSupply()": {
+        "details": "Returns the count of all existing NFTokens.",
+        "returns": {
+          "_0": "Total supply of NFTs."
+        }
+      },
+      "transferFrom(address,address,uint256)": {
+        "details": "Throws unless `msg.sender` is the current owner, an authorized operator, or the approved address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is the zero address. Throws if `_tokenId` is not a valid NFT. This function can be changed to payable.",
+        "params": {
+          "_from": "The current owner of the NFT.",
+          "_to": "The new owner.",
+          "_tokenId": "The NFT to transfer."
+        }
+      }
+    },
+    "stateVariables": {
+      "INVALID_INDEX": {
+        "details": "List of revert message codes. Implementing dApp should handle showing the correct message. Based on 0xcert framework error codes."
+      },
+      "idToIndex": {
+        "details": "Mapping from token ID to its index in global tokens array."
+      },
+      "idToOwnerIndex": {
+        "details": "Mapping from NFT ID to its index in the owner tokens list."
+      },
+      "idToUri": {
+        "details": "Mapping from NFT ID to metadata uri."
+      },
+      "nftName": {
+        "details": "A descriptive name for a collection of NFTs."
+      },
+      "nftSymbol": {
+        "details": "An abbreviated name for NFTokens."
+      },
+      "ownerToIds": {
+        "details": "Mapping from owner to list of owned NFT IDs."
+      },
+      "tokens": {
+        "details": "Array of all NFT IDs."
+      }
+    },
+    "version": 1
+  },
+  "userdoc": {
+    "kind": "user",
+    "methods": {
+      "approve(address,uint256)": {
+        "notice": "The zero address indicates there is no approved address. Throws unless `msg.sender` is the current NFT owner, or an authorized operator of the current owner."
+      },
+      "getApproved(uint256)": {
+        "notice": "Throws if `_tokenId` is not a valid NFT."
+      },
+      "safeTransferFrom(address,address,uint256)": {
+        "notice": "This works identically to the other function with an extra data parameter, except this function just sets data to \"\"."
+      },
+      "safeTransferFrom(address,address,uint256,bytes)": {
+        "notice": "Throws unless `msg.sender` is the current owner, an authorized operator, or the approved address for this NFT. Throws if `_from` is not the current owner. Throws if `_to` is the zero address. Throws if `_tokenId` is not a valid NFT. When transfer is complete, this function checks if `_to` is a smart contract (code size > 0). If so, it calls `onERC721Received` on `_to` and throws if the return value is not `bytes4(keccak256(\"onERC721Received(address,uint256,bytes)\"))`."
+      },
+      "setApprovalForAll(address,bool)": {
+        "notice": "This works even if sender doesn't own any tokens at the time."
+      },
+      "transferFrom(address,address,uint256)": {
+        "notice": "The caller is responsible to confirm that `_to` is capable of receiving NFTs or else they may be permanently lost."
+      }
+    },
+    "version": 1
+  },
+  "storageLayout": {
+    "storage": [
+      {
+        "astId": 2388,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "supportedInterfaces",
+        "offset": 0,
+        "slot": "0",
+        "type": "t_mapping(t_bytes4,t_bool)"
+      },
+      {
+        "astId": 1711,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "idToOwner",
+        "offset": 0,
+        "slot": "1",
+        "type": "t_mapping(t_uint256,t_address)"
+      },
+      {
+        "astId": 1716,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "idToApproval",
+        "offset": 0,
+        "slot": "2",
+        "type": "t_mapping(t_uint256,t_address)"
+      },
+      {
+        "astId": 1721,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "ownerToNFTokenCount",
+        "offset": 0,
+        "slot": "3",
+        "type": "t_mapping(t_address,t_uint256)"
+      },
+      {
+        "astId": 1728,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "ownerToOperators",
+        "offset": 0,
+        "slot": "4",
+        "type": "t_mapping(t_address,t_mapping(t_address,t_bool))"
+      },
+      {
+        "astId": 769,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "nftName",
+        "offset": 0,
+        "slot": "5",
+        "type": "t_string_storage"
+      },
+      {
+        "astId": 772,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "nftSymbol",
+        "offset": 0,
+        "slot": "6",
+        "type": "t_string_storage"
+      },
+      {
+        "astId": 774,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "last_token_id",
+        "offset": 0,
+        "slot": "7",
+        "type": "t_uint256"
+      },
+      {
+        "astId": 779,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "idToUri",
+        "offset": 0,
+        "slot": "8",
+        "type": "t_mapping(t_uint256,t_string_storage)"
+      },
+      {
+        "astId": 787,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "tokens",
+        "offset": 0,
+        "slot": "9",
+        "type": "t_array(t_uint256)dyn_storage"
+      },
+      {
+        "astId": 792,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "idToIndex",
+        "offset": 0,
+        "slot": "10",
+        "type": "t_mapping(t_uint256,t_uint256)"
+      },
+      {
+        "astId": 798,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "ownerToIds",
+        "offset": 0,
+        "slot": "11",
+        "type": "t_mapping(t_address,t_array(t_uint256)dyn_storage)"
+      },
+      {
+        "astId": 803,
+        "contract": "contracts/tokens/nf-token-emumMetadata.sol:NFTokenMetaEnumerable",
+        "label": "idToOwnerIndex",
+        "offset": 0,
+        "slot": "12",
+        "type": "t_mapping(t_uint256,t_uint256)"
+      }
+    ],
+    "types": {
+      "t_address": {
+        "encoding": "inplace",
+        "label": "address",
+        "numberOfBytes": "20"
+      },
+      "t_array(t_uint256)dyn_storage": {
+        "base": "t_uint256",
+        "encoding": "dynamic_array",
+        "label": "uint256[]",
+        "numberOfBytes": "32"
+      },
+      "t_bool": {
+        "encoding": "inplace",
+        "label": "bool",
+        "numberOfBytes": "1"
+      },
+      "t_bytes4": {
+        "encoding": "inplace",
+        "label": "bytes4",
+        "numberOfBytes": "4"
+      },
+      "t_mapping(t_address,t_array(t_uint256)dyn_storage)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256[])",
+        "numberOfBytes": "32",
+        "value": "t_array(t_uint256)dyn_storage"
+      },
+      "t_mapping(t_address,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_address,t_mapping(t_address,t_bool))": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => mapping(address => bool))",
+        "numberOfBytes": "32",
+        "value": "t_mapping(t_address,t_bool)"
+      },
+      "t_mapping(t_address,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_address",
+        "label": "mapping(address => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_mapping(t_bytes4,t_bool)": {
+        "encoding": "mapping",
+        "key": "t_bytes4",
+        "label": "mapping(bytes4 => bool)",
+        "numberOfBytes": "32",
+        "value": "t_bool"
+      },
+      "t_mapping(t_uint256,t_address)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => address)",
+        "numberOfBytes": "32",
+        "value": "t_address"
+      },
+      "t_mapping(t_uint256,t_string_storage)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => string)",
+        "numberOfBytes": "32",
+        "value": "t_string_storage"
+      },
+      "t_mapping(t_uint256,t_uint256)": {
+        "encoding": "mapping",
+        "key": "t_uint256",
+        "label": "mapping(uint256 => uint256)",
+        "numberOfBytes": "32",
+        "value": "t_uint256"
+      },
+      "t_string_storage": {
+        "encoding": "bytes",
+        "label": "string",
+        "numberOfBytes": "32"
+      },
+      "t_uint256": {
+        "encoding": "inplace",
+        "label": "uint256",
+        "numberOfBytes": "32"
+      }
+    }
+  }
+}
