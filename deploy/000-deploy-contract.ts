@@ -1,8 +1,11 @@
 module.exports = async ({ ethers, getNamedAccounts, deployments }) => {
+  const { log } = deployments
+  log(123)
+  console.log(123)
   const { deploy } = deployments
 
-  const { log } = deployments
   const namedAccounts = await getNamedAccounts()
+  log(namedAccounts)
   const { deployer } = namedAccounts
 
   const deployResult = await deploy("ExampleToken", {

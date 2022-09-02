@@ -39,6 +39,10 @@ export default {
       url: `https://kovan.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
       accounts,
     },
+    rinkeby: {
+      url: `https://rinkeby.infura.io/v3/${process.env.INFURA_PROJECT_ID}`,
+      accounts,
+    },
     mainnet: {
       url: MAINNET_RPC_URL,
       accounts: accounts,

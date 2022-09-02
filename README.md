@@ -15,3 +15,6 @@ The following assumes the use of `node@>=12`.
 ### Run Tests
 
 `yarn test`
+
+### Delpoy 
+`yarn hardhat deploy  --network rinkeby`
